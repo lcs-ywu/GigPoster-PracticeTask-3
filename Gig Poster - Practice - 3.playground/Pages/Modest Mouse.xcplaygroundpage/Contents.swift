@@ -31,8 +31,44 @@ let deepYellow = Color(hue: 46, saturation: 99, brightness: 99, alpha: 100)
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
 // Begin your solution here...
+canvas.fillColor = darkGrey
+canvas.drawRectangle(at: Point(x:0,y:0), width: 400, height: 600)
+//canvas.drawLine(from: Point(x:400,y:400), to: Point(x:0,y:0), lineWidth: 22)
+//if x < 325{
+//    canvas.fillColor = lightGrey
+//}else if x >
 
+//for x in stride(from: 50, through: 500, by: 43) {
+//    for y in stride(from: 610, through: 0, by: -43) {
+//        canvas.drawLine(from: Point(x:x,y:y), to: Point(x:x-600,y:y-600), lineWidth: 15)
+//    }
+//}
 
+for x in stride(from: 40, through: 1000, by: 43) {
+    if x<550 {
+        canvas.lineColor = lightGrey
+    }else if x>550,x<650{
+        canvas.lineColor = deepYellow
+    }else{
+        canvas.lineColor = black
+    }
+        canvas.drawLine(from: Point(x:x,y:600), to: Point(x:x-600,y:0), lineWidth: 15)
+}
+
+canvas.fillColor = darkGrey
+canvas.drawRectangle(at: Point(x:0,y:400), width: 400, height: 200)
+
+canvas.drawText(message: "modest mouse", at: Point(x:10,y:400), size: 40)
+//canvas.drawText(message: "at the speak in tongues social hall", at: <#T##Point#>, size: 10)
+//canvas.drawText(message: "4311 lorain ave./ cleveland, oh", at: <#T##Point#>, size: 10)
+
+//Last, draw a grid for referennce
+for y in stride(from: 0, through: 600, by: 50){
+    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
+}
+for x in stride(from: 0, through: 400, by: 50){
+    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+}
 /*:
  ## Use Source Control
  
