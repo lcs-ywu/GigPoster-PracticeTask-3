@@ -59,8 +59,12 @@ canvas.fillColor = darkGrey
 canvas.drawRectangle(at: Point(x:0,y:400), width: 400, height: 200)
 
 canvas.drawText(message: "modest mouse", at: Point(x:10,y:400), size: 40)
-//canvas.drawText(message: "at the speak in tongues social hall", at: <#T##Point#>, size: 10)
-//canvas.drawText(message: "4311 lorain ave./ cleveland, oh", at: <#T##Point#>, size: 10)
+canvas.drawText(message: "at the speak in tongues social hall", at: Point(x:10,y:575), size: 9)
+canvas.drawText(message: "4311 lorain ave./ cleveland, oh", at: Point(x:10,y:565), size: 9)
+canvas.drawText(message: "saturday / august 24 1996", at: Point(x:170,y:575), size: 9)
+canvas.drawText(message: "10 pm, all invited", at: Point(x:170,y:565), size: 9)
+canvas.drawText(message: "with old hearts club", at: Point(x:300,y:575), size: 9)
+canvas.drawText(message: "and melk", at: Point(x:345,y:565), size: 9)
 
 //Last, draw a grid for referennce
 for y in stride(from: 0, through: 600, by: 50){
